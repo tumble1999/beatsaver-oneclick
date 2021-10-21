@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Beat Saver One Click (beatsaver://)
+Exec=beat-saver.sh %u
+StartupNotify=false
+MimeType=x-scheme-handler/beatsaver;
+Terminal=true
