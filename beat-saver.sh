@@ -12,19 +12,19 @@ env|grep beat
 	read -p  'Enter location to BeatSaber: ' BEATSABER_DIR
 	echo "export BEATSABER_DIR=\"${BEATSABER_DIR}\"">>~/.bash_profile
 fi
-mkdir -p "${BEATSABER_DIR}/Beat Saber_Data/CustomLevels"
+mkdir -p "${BEATSABER_DIR}/Beat Saber_Data/CustomLevels" -v
 
 cd /tmp
-mkdir "beatsaver_${ID}"
+mkdir "beatsaver_${ID}" -v
 cd "beatsaver_${ID}"
 rm -rf *
 wget ${URL} -O map.zip
-unzip map.zip -d map
+unzip map.zip -d map -v
 cd map
 DIR_NAME="${ID} ($(cat Info.dat | jq -r ._songName))"
 cd ..
-mv map "${DIR_NAME}"
-cp -r "${DIR_NAME}" "${BEATSABER_DIR}/Beat Saber_Data/CustomLevels"
+mv map "${DIR_NAME}" -v
+cp -r "${DIR_NAME}" "${BEATSABER_DIR}/Beat Saber_Data/CustomLevels" -v
 
 echo "----------------------------------------------------------------"
 echo "Installed: ${DIR_NAME}"
