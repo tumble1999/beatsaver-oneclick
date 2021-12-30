@@ -11,8 +11,8 @@ if [ ! -n "${BEATSABER_DIR}" ]; then
 env|grep beat
 	read -p  'Enter location to BeatSaber: ' BEATSABER_DIR
 	echo "export BEATSABER_DIR=\"${BEATSABER_DIR}\"">>~/.bash_profile
-	mkdir -p "${BEATSABER_DIR}/Beat Saber_Data/CustomLevels"
 fi
+mkdir -p "${BEATSABER_DIR}/Beat Saber_Data/CustomLevels"
 
 cd /tmp
 mkdir "beatsaver_${ID}"
